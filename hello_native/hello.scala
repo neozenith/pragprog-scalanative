@@ -3,6 +3,8 @@ import scala.scalanative.libc._
 
 object Main {
   def main(args: Array[String]) {
-    stdio.printf(c"Hello native %s!\n", c"world")
+    Zone { implicit z =>
+      stdio.vprintf(c"Hello native %s!\n", toCVarArgList(c"world"))
+    }
   }
 }
