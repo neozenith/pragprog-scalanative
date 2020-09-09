@@ -1,2 +1,6 @@
+.metals/
 *.class
 *.log
+target/
+*.hnir
+code/
